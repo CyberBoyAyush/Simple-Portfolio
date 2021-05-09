@@ -1,6 +1,7 @@
 # Simple-Portfolio
 A simple single page portfolio which is easy to edit and easy to deploy.
 
+![Alt Text](https://github.com/CyberBoyAyush/Simple-Portfolio/blob/master/video.gif.mp4)
 
 ###
 [![Netlify Deploy](https://img.shields.io/github/forks/cyberboyayush/Simple-Portfolio?style=for-the-badge)](https://github.com/CyberBoyAyush/Simple-Portfolio)
