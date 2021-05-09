@@ -1,7 +1,7 @@
 # Simple-Portfolio
 A simple single page portfolio which is easy to edit and easy to deploy.
 
-![Alt Text](https://github.com/CyberBoyAyush/Simple-Portfolio/blob/master/video.gif.mp4)
+<p align="center"><img src="./kt.gif" /></p>
 
 ###
 [![Netlify Deploy](https://img.shields.io/github/forks/cyberboyayush/Simple-Portfolio?style=for-the-badge)](https://github.com/CyberBoyAyush/Simple-Portfolio)
@@ -55,7 +55,7 @@ Download [Source Code Zip](https://github.com/CyberBoyAyush/Simple-Portfolio/rel
 
 
 # LICENSE📋
-[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
+[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)
 
 * Copyright (C) 2021-2022 by CyberBoyAyush@Github, < https://github.com/CyberBoyAyush >.
 
