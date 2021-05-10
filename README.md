@@ -51,7 +51,7 @@ git push origin [branch_name]
 [![Netlify Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CyberBoyAyush/Simple-Portfolio)
 
 # Host it on your own server (Hosting Or Cloud)
-Download [Source Code Zip](https://github.com/CyberBoyAyush/Simple-Portfolio/archive/refs/tags/Download-Source.zip)
+Download [Source Code Zip](https://github.com/CyberBoyAyush/Simple-Portfolio/archive/refs/tags/Download-Source.zip) and add it to your hosting file manager and than extract it and delete readme.md
 
 # LICENSE📋
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)
