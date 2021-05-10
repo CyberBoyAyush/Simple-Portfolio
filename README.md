@@ -48,7 +48,7 @@ git push origin [branch_name]
 # Deploy Simple-Portfolio on Netlify
 
 ## Click on below button to deploy it on Netlify
-[![Netlify Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CyberBoyAyush/Simple-Portfolio)
+[![Netlify Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy)
 
 # Host it on your own server (Hosting Or Cloud)
 Download [Source Code Zip](https://github.com/CyberBoyAyush/Simple-Portfolio/archive/refs/tags/Download-Source.zip) and add it to your hosting file manager and than extract it and delete readme.md
