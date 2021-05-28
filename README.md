@@ -65,4 +65,4 @@ published by the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
 # Credits
-- [ViperAdnan](https://github.com/viperadnan-git) for his old portfolio repo which is not available. All code credits goes to him i just added more atuff in this and added a good readme to this project to make it wasy to Deploy.
+- [ViperAdnan](https://github.com/viperadnan-git) for his old portfolio repo which is not available. All code credits goes to him i just added more stuff in this and added a good readme to this project to make it easy to Deploy.
