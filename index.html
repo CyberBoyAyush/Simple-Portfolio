@@ -1,108 +1,674 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CyberBoyAyush</title>
-        <link rel="icon" href="https://github.com/CyberBoyAyush/Portfolio/blob/master/profile.png" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <div id="header" class="section">
-            <img alt="logo" class="img-circle" src="profile.png"> 
-            <p>CyberBoyAyush</p>
-        </div>
-        <div class="section">
-            <h1><span>About Me</span></h1>
-            <p> Hey! I'm <strong>CyberBoyAyush</strong> from <strong>New Delhi, India.</strong>. Currently studying <strong>Computer Engineering</strong>. I Like <strong>Coding</strong> Python And PHP Is Love❤️❤️</p>
-            <p class="quote">~ CyberBoyAyush</p>
-        </div>
-        <div class="section" id="res">
-            <h1><span>My Works</span></h1>
-            <p align="centre"><strong>Here Are Some Of My Works</strong></p>
-            <a href="https://telegram.me/AyushBots">
-                <img src="https://img.icons8.com/nolan/144/telegram-app.png"/>
-                <div class="caption">Telegram Channel</div>
-            </a>
-            <a href="https://github.com/CyberBoyAyush">
-                <img src="https://img.icons8.com/nolan/144/github.png"/>
-                <div class="caption">Github Account</div>
-            </a>
-            <a href="https://CyberBoyAyush.in">
-                <img src="https://img.icons8.com/dusk/144/000000/domain.png"/>
-                <div class="caption">My Website</div>
-            </a>
-            <br>
-            <p align="centre"><strong>Resources I Use</strong></p>
-            <a href="https://github.com/">
-                <img src="https://img.icons8.com/nolan/144/github.png"/>
-                <div class="caption">Github</div>
-            </a>
-            <a href="https://telegram.me">
-                <img src="https://img.icons8.com/nolan/144/telegram-app.png"/>
-                <div class="caption">Telegram</div>
-            </a>
-            <a href="https://code.visualstudio.com">
-                <img src="https://img.icons8.com/nolan/144/code.png"/>
-                <div class="caption">VS Code Editor</div>
-            </a>
-            <a href="https://python.org">
-                <img src="https://img.icons8.com/nolan/144/python.png"/>
-                <div class="caption">Python</div>
-            </a>
-            <a href="https://www.php.net/">
-                <img src="https://img.icons8.com/dusk/144/000000/php-logo.png"/>
-                <div class="caption">PHP</div>
-            </a>
-            <a href="https://ubuntu.com">
-                <img src="https://img.icons8.com/color/144/000000/ubuntu--v1.png"/>
-                <div class="caption">Ubuntu</div>
-            </a>
-        </div>
-        <div class="section">
-            <h1><span>My Skills</span></h1>
-            <ul>
-                <li>Python<br /> <progress min="0" max="100" value="95"></progress> </li>
-                <li>PHP <br /> <progress min="0" max="100" value="75"></progress> </li>
-                <li>Coding<br /> <progress min="0" max="100" value="100"></progress> </li>
-            </ul>
-        </div>
-        <div class="section" id="contacts">
-            <h1><span>Follow Me</span></h1>
-            <div>
-                <a href="https://instagram.com/CyberBoyAyush" target="_blank">
-                <img alt="Instagram" src="https://img.icons8.com/cute-clipart/100/instagram-new.png"/>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags for Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberBoyAyush - Portfolio</title>
+    
+    <!-- External Resources & CDN Links -->
+    <!-- These provide fonts, icons, and styling frameworks -->
+    <!-- Favicon -->
+    <link rel="icon" href="profile.png" type="image/png">
+    
+    <!-- Google Font - Bellota -->
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Heroicons (for better icons) -->
+    <script src="https://unpkg.com/@heroicons/v2/outline/24/esm/index.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Tailwind Configuration -->
+    <!-- Customize Tailwind's default styles and add custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Custom font family - Using Bellota for unique typography
+                    fontFamily: {
+                        bellota: ['Bellota', 'cursive'],
+                    },
+                    // Custom color scheme - Can be modified to match your brand
+                    colors: {
+                        primary: '#3B82F6',    // Bright Blue
+                        secondary: '#1E40AF',   // Dark Blue
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Particles.js for background animation -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom Animations and Styles -->
+    <style>
+        /* Gradient Text Animation
+           Creates a moving gradient effect for text elements */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-gradient {
+            background-size: 200% auto;
+            animation: gradient 4s linear infinite;
+        }
+
+        /* Background Grid Pattern
+           Creates a subtle grid overlay effect */
+        .bg-grid-white {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                             linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+        }
+
+        /* Progress Bar Animation
+           Used in the skills section to show proficiency levels */
+        .skill-progress {
+            @apply w-full h-2 bg-gray-200 rounded-full overflow-hidden;
+        }
+        .skill-progress-bar {
+            @apply h-full bg-primary rounded-full transition-all duration-500;
+        }
+
+        /* Floating Particles Animation
+           Creates interactive background particles */
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .animated-bg span {
+            position: absolute;
+            display: block;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 25s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-1000px) rotate(720deg);
+            }
+        }
+
+        #particles-js {
+            position: absolute; /* Changed from fixed to absolute for header context */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Ensure it's behind hero content */
+        }
+        
+        /* Hero Content Stacking */
+        .hero-content {
+            position: relative;
+            z-index: 2; /* Ensure it's above particles */
+        }
+        
+        /* Smooth Scrolling Behavior
+           Enables smooth scrolling when clicking navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Overflow Control & Basic Layout */
+        html, body {
+            @apply overflow-x-hidden min-h-screen;
+            position: relative; /* Needed for absolute positioning context */
+        }
+
+        body {
+            @apply bg-gray-50;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            @apply flex-grow relative z-10; /* Ensure main content is above fixed backgrounds */
+        }
+
+        footer {
+             @apply relative z-10; /* Ensure footer is above fixed backgrounds */
+        }
+
+        /* Consolidated Site Container */
+        .site-container {
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+        }
+
+        /* Section Padding */
+        .section-padding {
+            @apply py-16 md:py-24;
+        }
+
+        /* Ensure sections take full width within the container */
+        .section-content {
+            @apply w-full;
+        }
+
+        /* Background Bubbles Style */
+        .animated-bg {
+            @apply fixed inset-0; /* Keep this fixed for overall background effect */
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0; /* Behind everything */
+        }
+
+        .animated-bg span {
+            position: absolute;
+            display: block;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 25s linear infinite;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            .site-container { /* Use site-container for mobile padding */
+                @apply px-4;
+            }
+            
+            h1 {
+                @apply text-4xl;
+            }
+            
+            .skill-progress {
+                @apply w-full;
+            }
+
+            .section-padding {
+                 @apply py-12 md:py-16; /* Reduce padding on mobile */
+            }
+        }
+
+        /* Remove conflicting/redundant rules below this line if they exist */
+        /* Removed old .container, .content-wrapper, .section-wrapper definitions */
+
+    </style>
+</head>
+
+<body class="font-bellota text-gray-800">
+    <!-- Hero Section: The main landing area -->
+    <header class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
+        <!-- Background Effects Layer -->
+        <!-- These create the interactive background animation -->
+        <!-- Particles.js Container -->
+        <div id="particles-js"></div>
+        
+        <!-- Animated Background -->
+        <div class="animated-bg" id="animated-bg"></div>
+        
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:60px_60px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/50"></div>
+        
+        <!-- Content Layer -->
+        <div class="hero-content site-container relative flex flex-col items-center justify-center min-h-screen py-20">
+            <!-- Profile Image with Glow Effect -->
+            <div class="relative mb-8 animate-fade-in">
+                <div class="absolute inset-0 bg-blue-500/30 rounded-full blur-3xl transform animate-pulse"></div>
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+                <img 
+                    src="profile.png" 
+                    alt="CyberBoyAyush Profile"
+                    class="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white/50 shadow-2xl object-cover transform hover:scale-105 transition-all duration-300"
+                >
+            </div>
+
+            <!-- Name and Title with Gradient Effect -->
+            <div class="relative">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent animate-gradient">
+                    CyberBoyAyush
+                </h1>
+                <div class="absolute -inset-1 blur-lg bg-gradient-to-r from-blue-600 to-blue-400 opacity-20"></div>
+            </div>
+
+            <!-- Typing Effect Text -->
+            <p class="text-xl md:text-2xl text-blue-200 mb-8 text-center typewriter">
+                Computer Engineering Student & Developer
+                <span class="inline-block animate-bounce">👨‍💻</span>
+            </p>
+
+            <!-- Call-to-Action Buttons -->
+            <!-- These buttons link to important sections -->
+            <div class="flex flex-wrap gap-4 justify-center mt-8">
+                <a href="#projects" 
+                   class="group px-8 py-3 bg-white text-blue-900 rounded-full font-semibold hover:bg-blue-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <span class="flex items-center">
+                        View Projects
+                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </span>
                 </a>
-                <a href="https://twitter.com/CyberBoyAyush">
-                <img alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
-                </a>
-                <a href="https://github.com/CyberBoyAyush">
-                <img alt="GitHub" src="https://img.icons8.com/nolan/144/github.png"/>
-                </a>
-                <a href="https://t.me/CyberBoyAyush">
-                <img alt="Telegram" src="https://img.icons8.com/fluent/96/000000/telegram-app.png"/>
-                </a>
-                <a href="https://www.youtube.com/channel/UCRD6WpNNzJpRIU4z89PNSbg">
-                <img alt="YouTube" src="https://img.icons8.com/color/96/000000/youtube-play.png"/>
-                </a>
-                <a href="mailto:contact@cyberboyayush.in">
-                <img alt="Email" src="https://img.icons8.com/fluent/96/000000/gmail.png"/>
+                <a href="#contact" 
+                   class="group px-8 py-3 bg-transparent border-2 border-white rounded-full font-semibold hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
+                    <span class="flex items-center">
+                        Contact Me
+                        <i class="fas fa-envelope ml-2 group-hover:scale-110 transition-transform"></i>
+                    </span>
                 </a>
             </div>
         </div>
-        <div class="section" id="contacts">
-        <h1><span>Contact Us</span></h1>
-        <a href="mailto:contact@cyberboyayush.in">
-            <img src="https://img.icons8.com/fluent/95/000000/gmail--v2.png"/>
-            </a>
+
+        <!-- Enhanced Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
+            <span class="text-sm text-white/70 mb-2">Scroll Down</span>
+            <div class="animate-bounce">
+                <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
         </div>
-        <center>Made with ❤️ By <a href="https://github.com/CyberBoyAyush">
-            CyberBoyAyush
-          </a></center>
-   
-        <script type="text/javascript">
-            function search() {
-                window.open('https://www.google.com/search?output=search&q=' + document.getElementById("question").value)
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 bg-gray-50">
+        <div class="site-container py-12">
+        
+            <!-- SECTION: About Me -->
+            <!-- Edit this section to add your personal information -->
+            <section class="section-content section-padding">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8 relative">
+                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">About Me</span>
+                    </h2>
+                    <div class="bg-white rounded-xl shadow-lg p-8 transform hover:shadow-xl transition-shadow duration-300">
+                        <p class="text-lg text-center leading-relaxed">
+                            Hey! I'm <strong class="text-primary">CyberBoyAyush</strong> from 
+                            <strong>New Delhi, India</strong>. Currently studying 
+                            <strong>Computer Engineering</strong>. I Love 
+                            <strong>Coding</strong> - Python And PHP Is Love ❤️
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: Skills -->
+            <!-- Modify the percentages and skills to match your expertise -->
+            <section class="section-content section-padding">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">
+                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">My Skills</span>
+                    </h2>
+                    <div class="bg-white rounded-xl shadow-lg p-8 space-y-6">
+                        <!-- Python Skill -->
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Python</span>
+                                <span class="text-primary">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <!-- PHP Skill -->
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">PHP</span>
+                                <span class="text-primary">75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Coding Skill -->
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Coding</span>
+                                <span class="text-primary">100%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: Projects -->
+            <!-- Add or modify projects to showcase your work -->
+            <!-- Each project card follows this structure:
+                 1. Preview image/icon
+                 2. Project title
+                 3. Description
+                 4. Technology tags
+                 5. Links to live demo/code -->
+            <section id="projects" class="section-content section-padding">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-12">
+                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Featured Projects</span>
+                    </h2>
+                    <!-- Adjust grid gap for better mobile responsiveness -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+                        <!-- Telegram Bot Project -->
+                        <div class="group bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative overflow-hidden">
+                                <!-- Project Preview Background -->
+                                <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
+                                    <i class="fab fa-telegram text-6xl text-white/90"></i>
+                                </div>
+                                <!-- Overlay with Quick Links -->
+                                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                                    <a href="https://telegram.me/AyushBots" class="p-3 bg-white/10 hover:bg-white/25 rounded-full text-white transition-colors duration-200">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="p-3 bg-white/10 hover:bg-white/25 rounded-full text-white transition-colors duration-200">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Telegram Bots</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Collection of automated bots for Telegram providing various utilities and functions.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Python</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Telegram API</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GitHub Project -->
+                        <div class="group bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative overflow-hidden">
+                                <div class="h-48 bg-gradient-to-r from-gray-800 to-gray-900 flex items-center justify-center">
+                                    <i class="fab fa-github text-6xl text-white/90"></i>
+                                </div>
+                                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                                    <a href="https://github.com/CyberBoyAyush" class="p-3 bg-white/10 hover:bg-white/25 rounded-full text-white transition-colors duration-200">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Open Source Projects</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Collection of various open source contributions and personal projects on GitHub.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Various Tech</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Open Source</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Website -->
+                        <div class="group bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative overflow-hidden">
+                                <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center">
+                                    <i class="fas fa-globe text-6xl text-white/90"></i>
+                                </div>
+                                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                                    <a href="https://CyberBoyAyush.in" class="p-3 bg-white/10 hover:bg-white/25 rounded-full text-white transition-colors duration-200">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="p-3 bg-white/10 hover:bg-white/25 rounded-full text-white transition-colors duration-200">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Portfolio Website</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Personal portfolio website showcasing my work and skills in web development.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">HTML</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">TailwindCSS</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View More Projects Button -->
+                    <div class="text-center mt-12">
+                        <a href="https://github.com/CyberBoyAyush?tab=repositories" 
+                           class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors duration-300">
+                            <span class="mr-2">View More Projects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools Section -->
+            <section class="section-content section-padding">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">
+                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Tools I Use</span>
+                    </h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-github text-4xl text-gray-700 group-hover:text-primary transition-colors duration-300 block text-center mb-2"></i>
+                            <p class="text-center text-sm font-medium">Github</p>
+                        </div>
+                        <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-python text-4xl text-gray-700 group-hover:text-primary transition-colors duration-300 block text-center mb-2"></i>
+                            <p class="text-center text-sm font-medium">Python</p>
+                        </div>
+                        <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-php text-4xl text-gray-700 group-hover:text-primary transition-colors duration-300 block text-center mb-2"></i>
+                            <p class="text-center text-sm font-medium">PHP</p>
+                        </div>
+                        <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-linux text-4xl text-gray-700 group-hover:text-primary transition-colors duration-300 block text-center mb-2"></i>
+                            <p class="text-center text-sm font-medium">Linux</p>
+                        </div>
+                        <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i class="fas fa-code text-4xl text-gray-700 group-hover:text-primary transition-colors duration-300 block text-center mb-2"></i>
+                            <p class="text-center text-sm font-medium">VS Code</p>
+                        </div>
+                        <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-telegram text-4xl text-gray-700 group-hover:text-primary transition-colors duration-300 block text-center mb-2"></i>
+                            <p class="text-center text-sm font-medium">Telegram</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: Contact Form -->
+            <!-- IMPORTANT: Replace 'your-form-id' with your actual Formspree form ID -->
+            <section id="contact" class="section-content section-padding">
+                <div class="max-w-4xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-8">
+                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Get In Touch</span>
+                    </h2>
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <!-- Contact Form using Formspree -->
+                        <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" name="name" id="name" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" name="email" id="email" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea name="message" id="message" rows="4" required 
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" 
+                                        class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-full hover:bg-secondary transition-colors duration-300">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane ml-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Links -->
+            <section class="section-content section-padding">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">
+                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Get In Touch</span>
+                    </h2>
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                            <a href="https://instagram.com/CyberBoyAyush" target="_blank" class="group text-center">
+                                <i class="fab fa-instagram text-4xl text-gray-700 group-hover:text-pink-600 transform group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://twitter.com/CyberBoyAyush" target="_blank" class="group text-center">
+                                <i class="fab fa-twitter text-4xl text-gray-700 group-hover:text-blue-400 transform group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://github.com/CyberBoyAyush" target="_blank" class="group text-center">
+                                <i class="fab fa-github text-4xl text-gray-700 group-hover:text-gray-900 transform group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://t.me/CyberBoyAyush" target="_blank" class="group text-center">
+                                <i class="fab fa-telegram text-4xl text-gray-700 group-hover:text-blue-500 transform group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCRD6WpNNzJpRIU4z89PNSbg" target="_blank" class="group text-center">
+                                <i class="fab fa-youtube text-4xl text-gray-700 group-hover:text-red-600 transform group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="mailto:contact@cyberboyayush.in" class="group text-center">
+                                <i class="fas fa-envelope text-4xl text-gray-700 group-hover:text-primary transform group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="relative z-10 bg-gray-900 text-white py-8">
+        <div class="site-container">
+            <p class="text-sm opacity-75 text-center">
+                Made with ❤️ by 
+                <a href="https://github.com/CyberBoyAyush" 
+                   class="text-primary hover:text-secondary transition-colors duration-300">
+                    CyberBoyAyush
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        // Background Animation Functions
+        /* Creates floating bubble effect in the background
+           Modify bubbleCount and size for different density */
+        function createBubbles() {
+            const section = document.getElementById('animated-bg');
+            const bubbleCount = 15;
+
+            for(let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('span');
+                const size = Math.random() * 60 + 20; // Random size between 20 and 80
+                
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${Math.random() * 100}%`;
+                bubble.style.animationDelay = `${Math.random() * 10}s`;
+                bubble.style.animationDuration = `${Math.random() * 20 + 15}s`;
+                
+                section.appendChild(bubble);
             }
-        </script>
-    </body>
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', createBubbles);
+
+        // Particles.js Configuration
+        /* Customizes the interactive particle background
+           Adjust values to change particle behavior */
+        particlesJS('particles-js',
+            {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": true
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    }
+                },
+                "retina_detect": true
+            }
+        );
+
+        // Smooth Scrolling Navigation
+        /* Enables smooth scrolling when clicking navigation links */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
