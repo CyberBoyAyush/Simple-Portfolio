@@ -4,6 +4,12 @@ A simple, modern, single-page portfolio template designed for easy editing and d
 [![Netlify Deploy](https://img.shields.io/github/forks/cyberboyayush/Simple-Portfolio?style=for-the-badge)](https://github.com/CyberBoyAyush/Simple-Portfolio)
 [![Netlify Deploy](https://img.shields.io/github/stars/cyberboyayush/simple-portfolio?style=for-the-badge)](https://github.com/CyberBoyAyush/Simple-Portfolio)
 
+<!-- Add your screenshot here -->
+![Portfolio Screenshot](/image.png) 
+![Portfolio Screenshot](/image-2.png) 
+![Portfolio Screenshot](/iamge-3.png) 
+<!-- Make sure to add a screenshot.png file to the repository root, or update the path above -->
+
 # Features
 - **[X] Single Page Layout:** All content is accessible on a single, scrollable page for a seamless user experience.
 - **[X] Modern & Animated Design:**
@@ -87,4 +93,3 @@ Netlify offers robust free hosting for static sites with features like continuou
 
 ## Click on below button to deploy it on Netlify
 [![Netlify Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CyberBoyAyush/Simple-Portfolio)
-Alternatively, sign up on Netlify and connect your GitHub repository.
